@@ -34,9 +34,12 @@
 ### 使设计、实现简单，用起来更容易，不容易出错并且更安全
 
 ## What is functional programming?
+### 使用函数开发软件的编程模式
 
 ## Why should you prefer Builder Pattern to build complex objects?
 
 ## Why should you avoid floats for Calculations?
+### 会丢失精度
 
 ## Why should you build the riskiest high priority features first?
+### 高优先级
