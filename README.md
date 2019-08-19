@@ -34,12 +34,14 @@
  使设计、实现简单，用起来更容易，不容易出错并且更安全
 
 ## What is functional programming?
- 使用函数开发软件的编程模式
+ 函数映射关系的编程思想
 
 ## Why should you prefer Builder Pattern to build complex objects?
+使用简单的对象一步一步地构造复杂的对象，builder类独立于其他的对象；将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示；
+减少构造函数的种类，参数个数，可读性更高，在对象生成过程中，无需复杂逻辑即可生成不可变对象，对象始终以完全状态实例化；
 
 ## Why should you avoid floats for Calculations?
- 会丢失精度
+ 浮点数的运算存在丢失精度的风险
 
 ## Why should you build the riskiest high priority features first?
  高优先级
