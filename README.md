@@ -8,7 +8,7 @@
 ## Why should you understand performance of String Concatenation?
  1. 字符串的拼接是程序中最常见的操作之一了，如果使用不当，会引发性能问题。
  2. 最好使用StringBuilder，它的性能要远远好于+操作符与concat（），由于没有保障线程安全的开销，在不需要线程安全的情况下，也优于StringBuffer
- 3.  + 操作符会被编译器优化为类似new StringBuilder().append( "" ).append( 200 ).append('B').toString()
+ 3. "+" 操作符会被编译器优化为类似new StringBuilder().append( "" ).append( 200 ).append('B').toString()
 ，但是可能会由于拼接字符串的操作在循环体内而造成每次循环都会产生创新新的StringBuilder对象，并且StringBuilder默认是创建char[16]的空间，不够再进行扩容，这样会造成大量内存复制的操作开销，以及频繁调用toString带来的开销
 
 ## What are the best practices with Exception Handling?
@@ -35,7 +35,7 @@
  使设计、实现简单，用起来更容易，不容易出错并且更安全
 
 ## What is functional programming?
- 函数映射关系的编程思想
+ 利用数学上函数映射关系进行编程的思想
 
 ## Why should you prefer Builder Pattern to build complex objects?
 使用简单的对象一步一步地构造复杂的对象，builder类独立于其他的对象；将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示；
