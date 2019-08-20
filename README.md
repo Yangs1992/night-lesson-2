@@ -8,7 +8,8 @@
 ## Why should you understand performance of String Concatenation?
  1. 字符串的拼接是程序中最常见的操作之一了，如果使用不当，会引发性能问题。
  2. 最好使用StringBuilder，它的性能要远远好于+操作符与concat（），由于没有保障线程安全的开销，在不需要线程安全的情况下，也优于StringBuffer
- 3. 使用+会new 很多对象
+ 3.  + 操作符会被编译器优化为类似new StringBuilder().append( "" ).append( 200 ).append('B').toString()
+，但是可能会由于拼接字符串的操作在循环体内而造成每次循环都会产生创新新的StringBuilder对象，并且StringBuilder默认是创建char[16]的空间，不够再进行扩容，这样会造成大量内存复制的操作开销，以及频繁调用toString带来的开销
 
 ## What are the best practices with Exception Handling?
  1. 在Finally块中释放或清理资源，或者使用 try-with-resource, 避免发生异常导致释放资源的代码没有执行
@@ -44,4 +45,4 @@
  浮点数的运算存在丢失精度的风险
 
 ## Why should you build the riskiest high priority features first?
- 高优先级
+ 优先级高且具有较大风险的特性往往意味着该特性的重要程度与影响力都超过了其他特性，该特性能否顺利完成会是此次开发任务成功与否的关键，其他的特性可能会依赖于该特性，该特性也可能是最为重要的功能；由于风险最大，一开始就应该去解决，避免其他的特性完成之后才发现由于存在的风险导致其他特性收到影响，需要修改返工，同时一开始就应该评估相关风险带来的影响，使得开发的进度能够在可控的范围内。所有从重要程度与影响力来说应该首先开发。
