@@ -1,4 +1,4 @@
-# night-lesson
+# night-lesson-2
 
 ## Why should you have minimum scope for variables?
  1. 对于在程序中不同位置出现同名的变量，通过变量的作用域，我们才能够知道变量对应的值的情况以及使用的时候才知道用的是哪个同名变量的值。
@@ -32,10 +32,10 @@
  硬编码只是变量的值，除此之外不会给代码的阅读者额外的信息，而一般通过命名合理的枚举类型，可以知道对应值所属的语义和可取值的范围限制
 
 ## Why should you minimize mutability?
- 使设计、实现简单，用起来更容易，不容易出错并且更安全
+ 使设计、实现简单，用起来更容易，不容易出错并且更安全，诸如String类的实现
 
 ## What is functional programming?
- 利用数学上函数映射关系进行编程的思想
+ 利用数学上函数映射关系进行编程的思想，具有命令式编程不具备的特点
 
 ## Why should you prefer Builder Pattern to build complex objects?
 使用简单的对象一步一步地构造复杂的对象，builder类独立于其他的对象；将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示；
